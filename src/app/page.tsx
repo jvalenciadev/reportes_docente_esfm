@@ -11,6 +11,7 @@ import {
   ComparativaBarChart, ComparativaDeficitLine, ComparativaDeltaCards,
 } from '@/components/DocentesCharts';
 import { DataGrid } from '@/components/DataGrid';
+import { IPEDashboard } from '@/components/IPEDashboard';
 import {
   BarChart3,
   Scale,
@@ -19,6 +20,8 @@ import {
   Calculator,
   Layers,
   GraduationCap,
+  School,
+  BookOpen,
 } from 'lucide-react';
 
 const dataset = rawData as DatasetDocentes;
@@ -39,7 +42,10 @@ const TABS: { id: TabId; label: string; icon: React.ReactNode }[] = [
   { id: 'tabla', label: 'Tabla Detallada', icon: <TableProperties className="h-4 w-4" /> },
 ];
 
+type ActiveModule = 'secundaria' | 'ipe';
+
 export default function DocentesDashboard() {
+  const [activeModule, setActiveModule] = useState<ActiveModule>('secundaria');
   const [año, setAño] = useState<Año>('2031');
   const [params, setParams] = useState<ParamsModelo>(DEFAULT_PARAMS);
   const [filtroEspecialidad, setFiltroEspecialidad] = useState('');
@@ -84,18 +90,63 @@ export default function DocentesDashboard() {
               Proyección de Requerimiento Docente
             </h1>
           </div>
+          {/* Selector de Módulo */}
+          <div className="flex bg-slate-900 border border-slate-800 p-1 rounded-xl gap-1">
+            <button
+              onClick={() => setActiveModule('secundaria')}
+              className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all flex items-center gap-1.5 ${
+                activeModule === 'secundaria'
+                  ? 'bg-purple-600 text-white shadow-md shadow-purple-950'
+                  : 'text-slate-400 hover:text-slate-200'
+              }`}
+            >
+              <BookOpen className="h-3.5 w-3.5" />
+              <span>Secundaria & Especialidades (2026/2031)</span>
+            </button>
+            <button
+              onClick={() => setActiveModule('ipe')}
+              className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all flex items-center gap-1.5 ${
+                activeModule === 'ipe'
+                  ? 'bg-teal-600 text-white shadow-md shadow-teal-950'
+                  : 'text-slate-400 hover:text-slate-200'
+              }`}
+            >
+              <School className="h-3.5 w-3.5" />
+              <span>Inicial, Primaria & Especial (IPE-2026)</span>
+            </button>
+          </div>
+
           <div className="flex flex-wrap items-center gap-2 text-[11px] text-slate-400">
-            <span className="px-2 py-1 rounded-lg bg-slate-800 border border-slate-700">{dataset.especialidades.length} especialidades</span>
-            <span className="px-2 py-1 rounded-lg bg-slate-800 border border-slate-700">{dataset.departamentos.length} departamentos</span>
-            <span className="px-2 py-1 rounded-lg bg-slate-800 border border-slate-700">{datosCalculados.length} registros</span>
-            <span className={`px-2 py-1 rounded-lg border font-semibold ${año === '2026' ? 'text-sky-400 border-sky-800 bg-sky-950/40' : 'text-purple-400 border-purple-800 bg-purple-950/40'}`}>
-              {año}
-            </span>
+            {activeModule === 'secundaria' ? (
+              <>
+                <span className="px-2 py-1 rounded-lg bg-slate-800 border border-slate-700">{dataset.especialidades.length} especialidades</span>
+                <span className="px-2 py-1 rounded-lg bg-slate-800 border border-slate-700">{dataset.departamentos.length} departamentos</span>
+                <span className={`px-2 py-1 rounded-lg border font-semibold ${año === '2026' ? 'text-sky-400 border-sky-800 bg-sky-950/40' : 'text-purple-400 border-purple-800 bg-purple-950/40'}`}>
+                  {año}
+                </span>
+              </>
+            ) : (
+              <>
+                <span className="px-2 py-1 rounded-lg bg-slate-800 border border-slate-700">{dataset.especialidadesIPE?.length || 3} áreas</span>
+                <span className="px-2 py-1 rounded-lg bg-slate-800 border border-slate-700">{dataset.departamentosIPE?.length || 9} dptos</span>
+                <span className="px-2 py-1 rounded-lg border border-teal-800 bg-teal-950/40 text-teal-400 font-semibold">
+                  2026 IPE
+                </span>
+              </>
+            )}
           </div>
         </div>
       </header>
 
-      <div className="max-w-[1680px] mx-auto px-4 sm:px-6 py-6 flex flex-col lg:flex-row gap-6">
+      <div className="max-w-[1680px] mx-auto px-4 sm:px-6 py-6">
+        {activeModule === 'ipe' ? (
+          <IPEDashboard
+            data={dataset.dataIPE2026}
+            especialidades={dataset.especialidadesIPE}
+            departamentos={dataset.departamentosIPE}
+          />
+        ) : (
+          <div className="flex flex-col lg:flex-row gap-6">
         {/* Panel lateral */}
         <ControlPanel
           año={año} onAñoChange={setAño}
@@ -261,6 +312,8 @@ export default function DocentesDashboard() {
           </div>
         </main>
       </div>
-    </div>
-  );
+    )}
+  </div>
+</div>
+);
 }

@@ -50,11 +50,42 @@ export interface FilaCalculada {
   cargaHoraria: number;
 }
 
+// Fila raw de IPE (Inicial, Primaria, Especial 2026)
+export interface FilaIPE {
+  ESPECIALIDAD: string;
+  DEPARTAMENTO: string;
+  'EST UE': number;
+  PARALELOS: number;
+  PLANILLA: number;
+  EGRESADOS: number;
+  TOTAL: number;
+  'DOCENTE REAL': number | null;
+}
+
+export interface ParamsIPE {
+  estudiantesPorParalelo: number;
+  studentsPerDocReal: number;
+}
+
+export interface FilaCalculadaIPE {
+  especialidad: string;
+  departamento: string;
+  estUE: number;
+  paralelos: number;
+  planilla: number;
+  egresados: number;
+  total: number;
+  docenteReal: number;
+}
+
 export interface DatasetDocentes {
   especialidades: string[];
   departamentos: string[];
   data2026: FilaDocente[];
   data2031: FilaDocente[];
+  dataIPE2026: FilaIPE[];
+  especialidadesIPE: string[];
+  departamentosIPE: string[];
 }
 
 export type Año = '2026' | '2031';

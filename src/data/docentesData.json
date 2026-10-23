@@ -2798,5 +2798,293 @@
       "DOCENTE REAL": -29.28406349206349,
       "DOCENTE CON MARGEN DE ERROR": -2.928406349206349
     }
+  ],
+  "dataIPE2026": [
+    {
+      "ESPECIALIDAD": "INICIAL",
+      "DEPARTAMENTO": "BENI",
+      "EST UE": 15341.82,
+      "PARALELOS": 613.6727999999999,
+      "PLANILLA": 564,
+      "EGRESADOS": 36,
+      "TOTAL": -13.672799999999938,
+      "DOCENTE REAL": -0.45575999999999794
+    },
+    {
+      "ESPECIALIDAD": "INICIAL",
+      "DEPARTAMENTO": "CHUQUISACA",
+      "EST UE": 14439.49,
+      "PARALELOS": 577.5796,
+      "PLANILLA": 588,
+      "EGRESADOS": 57,
+      "TOTAL": 67.42039999999997,
+      "DOCENTE REAL": null
+    },
+    {
+      "ESPECIALIDAD": "INICIAL",
+      "DEPARTAMENTO": "COCHABAMBA",
+      "EST UE": 56588.22,
+      "PARALELOS": 2263.5288,
+      "PLANILLA": 1950,
+      "EGRESADOS": 82,
+      "TOTAL": -231.52880000000005,
+      "DOCENTE REAL": -7.717626666666669
+    },
+    {
+      "ESPECIALIDAD": "INICIAL",
+      "DEPARTAMENTO": "LA PAZ",
+      "EST UE": 77049.67,
+      "PARALELOS": 3081.9868,
+      "PLANILLA": 2797,
+      "EGRESADOS": 158,
+      "TOTAL": -126.98680000000013,
+      "DOCENTE REAL": -4.232893333333338
+    },
+    {
+      "ESPECIALIDAD": "INICIAL",
+      "DEPARTAMENTO": "ORURO",
+      "EST UE": 16227.75,
+      "PARALELOS": 649.11,
+      "PLANILLA": 679,
+      "EGRESADOS": 28,
+      "TOTAL": 57.889999999999986,
+      "DOCENTE REAL": null
+    },
+    {
+      "ESPECIALIDAD": "INICIAL",
+      "DEPARTAMENTO": "PANDO",
+      "EST UE": 3984.41,
+      "PARALELOS": 159.3764,
+      "PLANILLA": 166,
+      "EGRESADOS": 25,
+      "TOTAL": 31.62360000000001,
+      "DOCENTE REAL": null
+    },
+    {
+      "ESPECIALIDAD": "INICIAL",
+      "DEPARTAMENTO": "POTOSI",
+      "EST UE": 26882.55,
+      "PARALELOS": 1075.302,
+      "PLANILLA": 877,
+      "EGRESADOS": 66,
+      "TOTAL": -132.3019999999999,
+      "DOCENTE REAL": -4.410066666666664
+    },
+    {
+      "ESPECIALIDAD": "INICIAL",
+      "DEPARTAMENTO": "SANTA CRUZ",
+      "EST UE": 80722.95,
+      "PARALELOS": 3228.9179999999997,
+      "PLANILLA": 2676,
+      "EGRESADOS": 100,
+      "TOTAL": -452.91799999999967,
+      "DOCENTE REAL": -15.097266666666656
+    },
+    {
+      "ESPECIALIDAD": "INICIAL",
+      "DEPARTAMENTO": "TARIJA",
+      "EST UE": 12178.73,
+      "PARALELOS": 487.1492,
+      "PLANILLA": 587,
+      "EGRESADOS": 90,
+      "TOTAL": 189.8508,
+      "DOCENTE REAL": null
+    },
+    {
+      "ESPECIALIDAD": "PRIMARIA",
+      "DEPARTAMENTO": "BENI",
+      "EST UE": 73210,
+      "PARALELOS": 2928.4,
+      "PLANILLA": 3862,
+      "EGRESADOS": 29,
+      "TOTAL": 962.5999999999999,
+      "DOCENTE REAL": null
+    },
+    {
+      "ESPECIALIDAD": "PRIMARIA",
+      "DEPARTAMENTO": "CHUQUISACA",
+      "EST UE": 58223,
+      "PARALELOS": 2328.92,
+      "PLANILLA": 4367,
+      "EGRESADOS": 89,
+      "TOTAL": 2127.08,
+      "DOCENTE REAL": null
+    },
+    {
+      "ESPECIALIDAD": "PRIMARIA",
+      "DEPARTAMENTO": "COCHABAMBA",
+      "EST UE": 235436,
+      "PARALELOS": 9417.44,
+      "PLANILLA": 11569,
+      "EGRESADOS": 58,
+      "TOTAL": 2209.5599999999995,
+      "DOCENTE REAL": null
+    },
+    {
+      "ESPECIALIDAD": "PRIMARIA",
+      "DEPARTAMENTO": "LA PAZ",
+      "EST UE": 300526,
+      "PARALELOS": 12021.04,
+      "PLANILLA": 18187,
+      "EGRESADOS": 181,
+      "TOTAL": 6346.959999999999,
+      "DOCENTE REAL": null
+    },
+    {
+      "ESPECIALIDAD": "PRIMARIA",
+      "DEPARTAMENTO": "ORURO",
+      "EST UE": 59308,
+      "PARALELOS": 2372.32,
+      "PLANILLA": 3620,
+      "EGRESADOS": 84,
+      "TOTAL": 1331.6799999999998,
+      "DOCENTE REAL": null
+    },
+    {
+      "ESPECIALIDAD": "PRIMARIA",
+      "DEPARTAMENTO": "PANDO",
+      "EST UE": 17028,
+      "PARALELOS": 681.12,
+      "PLANILLA": 1101,
+      "EGRESADOS": 23,
+      "TOTAL": 442.88,
+      "DOCENTE REAL": null
+    },
+    {
+      "ESPECIALIDAD": "PRIMARIA",
+      "DEPARTAMENTO": "POTOSI",
+      "EST UE": 96274,
+      "PARALELOS": 3850.96,
+      "PLANILLA": 7055,
+      "EGRESADOS": 107,
+      "TOTAL": 3311.04,
+      "DOCENTE REAL": null
+    },
+    {
+      "ESPECIALIDAD": "PRIMARIA",
+      "DEPARTAMENTO": "SANTA CRUZ",
+      "EST UE": 387742,
+      "PARALELOS": 15509.68,
+      "PLANILLA": 15469,
+      "EGRESADOS": 175,
+      "TOTAL": 134.3199999999997,
+      "DOCENTE REAL": null
+    },
+    {
+      "ESPECIALIDAD": "PRIMARIA",
+      "DEPARTAMENTO": "TARIJA",
+      "EST UE": 57519,
+      "PARALELOS": 2300.76,
+      "PLANILLA": 3640,
+      "EGRESADOS": 34,
+      "TOTAL": 1373.2399999999998,
+      "DOCENTE REAL": null
+    },
+    {
+      "ESPECIALIDAD": "ESPECIAL",
+      "DEPARTAMENTO": "BENI",
+      "EST UE": 102,
+      "PARALELOS": 4.08,
+      "PLANILLA": 564,
+      "EGRESADOS": 0,
+      "TOTAL": 559.92,
+      "DOCENTE REAL": null
+    },
+    {
+      "ESPECIALIDAD": "ESPECIAL",
+      "DEPARTAMENTO": "CHUQUISACA",
+      "EST UE": 136,
+      "PARALELOS": 5.44,
+      "PLANILLA": 588,
+      "EGRESADOS": 0,
+      "TOTAL": 582.56,
+      "DOCENTE REAL": null
+    },
+    {
+      "ESPECIALIDAD": "ESPECIAL",
+      "DEPARTAMENTO": "COCHABAMBA",
+      "EST UE": 276,
+      "PARALELOS": 11.04,
+      "PLANILLA": 1950,
+      "EGRESADOS": 0,
+      "TOTAL": 1938.96,
+      "DOCENTE REAL": null
+    },
+    {
+      "ESPECIALIDAD": "ESPECIAL",
+      "DEPARTAMENTO": "LA PAZ",
+      "EST UE": 299,
+      "PARALELOS": 11.96,
+      "PLANILLA": 2797,
+      "EGRESADOS": 0,
+      "TOTAL": 2785.04,
+      "DOCENTE REAL": null
+    },
+    {
+      "ESPECIALIDAD": "ESPECIAL",
+      "DEPARTAMENTO": "ORURO",
+      "EST UE": 118,
+      "PARALELOS": 4.72,
+      "PLANILLA": 679,
+      "EGRESADOS": 30,
+      "TOTAL": 704.28,
+      "DOCENTE REAL": null
+    },
+    {
+      "ESPECIALIDAD": "ESPECIAL",
+      "DEPARTAMENTO": "PANDO",
+      "EST UE": 54,
+      "PARALELOS": 2.16,
+      "PLANILLA": 166,
+      "EGRESADOS": 0,
+      "TOTAL": 163.84,
+      "DOCENTE REAL": null
+    },
+    {
+      "ESPECIALIDAD": "ESPECIAL",
+      "DEPARTAMENTO": "POTOSI",
+      "EST UE": 130,
+      "PARALELOS": 5.2,
+      "PLANILLA": 877,
+      "EGRESADOS": 0,
+      "TOTAL": 871.8,
+      "DOCENTE REAL": null
+    },
+    {
+      "ESPECIALIDAD": "ESPECIAL",
+      "DEPARTAMENTO": "SANTA CRUZ",
+      "EST UE": 576,
+      "PARALELOS": 23.04,
+      "PLANILLA": 2676,
+      "EGRESADOS": 0,
+      "TOTAL": 2652.96,
+      "DOCENTE REAL": null
+    },
+    {
+      "ESPECIALIDAD": "ESPECIAL",
+      "DEPARTAMENTO": "TARIJA",
+      "EST UE": 169,
+      "PARALELOS": 6.76,
+      "PLANILLA": 587,
+      "EGRESADOS": 0,
+      "TOTAL": 580.24,
+      "DOCENTE REAL": null
+    }
+  ],
+  "especialidadesIPE": [
+    "INICIAL",
+    "PRIMARIA",
+    "ESPECIAL"
+  ],
+  "departamentosIPE": [
+    "BENI",
+    "CHUQUISACA",
+    "COCHABAMBA",
+    "LA PAZ",
+    "ORURO",
+    "PANDO",
+    "POTOSI",
+    "SANTA CRUZ",
+    "TARIJA"
   ]
 }

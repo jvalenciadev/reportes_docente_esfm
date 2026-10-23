@@ -1,4 +1,7 @@
-import { FilaDocente, FilaCalculada, ParamsModelo, PuntoComparativa } from './docentesTypes';
+import {
+  FilaDocente, FilaCalculada, ParamsModelo, PuntoComparativa,
+  FilaIPE, ParamsIPE, FilaCalculadaIPE
+} from './docentesTypes';
 
 const cargaCache = new Map<string, number>();
 export function extractCargaHoraria(especialidad: string): number {
@@ -165,4 +168,42 @@ export function construirComparativa(
       crecimiento: Math.round(crecimiento * 10) / 10,
     };
   });
+}
+
+/** Recalcula una fila de Inicial, Primaria y Especial (IPE-2026) */
+export function recalcularFilaIPE(fila: FilaIPE, params: ParamsIPE): FilaCalculadaIPE {
+  const estUE = fila['EST UE'] ?? 0;
+  const planilla = fila.PLANILLA ?? 0;
+  const egresados = fila.EGRESADOS ?? 0;
+  const paralelos = estUE / params.estudiantesPorParalelo;
+  const total = (planilla + egresados) - paralelos;
+  // Si total < 0 (déficit de docentes frente a paralelos), docenteReal = |total| / studentsPerDocReal
+  const docenteReal = total < 0 ? Math.abs(total) / params.studentsPerDocReal : 0;
+
+  return {
+    especialidad: fila.ESPECIALIDAD,
+    departamento: fila.DEPARTAMENTO,
+    estUE,
+    paralelos: r2(paralelos),
+    planilla,
+    egresados,
+    total: r2(total),
+    docenteReal: r2(docenteReal),
+  };
+}
+
+/** Filtra y procesa el dataset IPE-2026 */
+export function procesarDatasetIPE(
+  filas: FilaIPE[],
+  params: ParamsIPE,
+  filtroEspecialidad?: string,
+  filtroDepartamento?: string
+): FilaCalculadaIPE[] {
+  return filas
+    .filter((f) => {
+      if (filtroEspecialidad && f.ESPECIALIDAD !== filtroEspecialidad) return false;
+      if (filtroDepartamento && f.DEPARTAMENTO !== filtroDepartamento) return false;
+      return true;
+    })
+    .map((f) => recalcularFilaIPE(f, params));
 }
